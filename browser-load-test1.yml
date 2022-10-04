@@ -1,0 +1,15 @@
+config:
+  target: http://webdriveruniversity.com/Contact-Us/contactus.html
+  phases:
+    - arrivalRate: 1
+      duration: 5
+  engines:
+    playwright:
+      launchOptions:
+        headless: false
+  processor: "./fill-form.js"
+scenarios:
+  - name: Baher
+    engine: playwright
+    flowFunction: FillForm
+    flow: []
