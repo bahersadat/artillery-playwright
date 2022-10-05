@@ -4,27 +4,15 @@
   "description": "Automated software testing with playwright",
   "main": "index.js",
   "scripts": {
-    "example:chrome": "playwright test tests/example/example.spec.ts --config=playwright.config.ts --project=chromium",
-    "example:firefox": "playwright test tests/example/example.spec.ts --config=playwright.config.ts --project=Firefox",
-    "example:webkit": "playwright test tests/example/example.spec.ts --config=playwright.config.ts --project=Webkit",
-    "tests:w-university": "npx playwright test --config=webdriver-university.config.ts --project=chromium --reporter=list",
-    "tests:e2e": "playwright test tests/e2e --config=e2e.config.ts --project=chromium",
-    "tests:parabank": "playwright test --config=para.config.ts --project=chromium --reporter=reporter.ts",
-    "tests:visual:chrome": "playwright test --config=visual.config.ts --project=chromium",
-    "tests:visual:firefox": "playwright test --config=visual.config.ts --project=firefox",
-    "tests:visual:webkit": "playwright test --config=visual.config.ts --project=webkit",
-    "tests:visual:chrome:update": "playwright test --config=visual.config.ts --project=chromium --update-snapshots",
-    "tests:visual:firefox:update": "playwright test --config=visual.config.ts --project=firefox --update-snapshots",
-    "tests:visual:webkit:update": "playwright test --config=visual.config.ts --project=webkit --update-snapshots",
-    "tests:api": "playwright test --config=api.config.ts --project=chromium --reporter=list",
-    "tests:api2": "playwright test --config=api2.config.ts --project=chromium --reporter=list",
     "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
   },
   "author": "Baher Sadat",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^18.8.2",
     "prettier": "^2.7.1"
   },
+  
   "devDependencies": {
     "@playwright/test": "^1.25.1",
     "playwright": "^1.25.1",

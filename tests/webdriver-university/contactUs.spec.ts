@@ -1,5 +1,7 @@
-import {test, expect} from '@playwright/test';
-import {ContactUsPage} from '../../page-objects/webdriver-university/ContactUs.page';
+import { test } from '@playwright/test';
+import { ContactUsPage } from '../../page-objects/webdriver-university/ContactUs.page';
+
+async function FillForm() {
 
 test.describe("Contact Us Page Automations", () => {
     //declaring Variables (for page objects)
@@ -32,3 +34,6 @@ test.describe("Contact Us Page Automations", () => {
     });
     
 })
+}
+
+module.exports = { FillForm }
