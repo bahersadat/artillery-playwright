@@ -1,20 +1,10 @@
-import { expect, Locator, Page } from "@playwright/test";
-import { BasePage } from "../../page-objects/webdriver-university/BasePage.page";
+const { expect, Locator, Page } = require("@playwright/test");
+const { BasePage } = require("./BasePage.page");
 
-export class ContactUsPage extends BasePage{
-    // no page variable here, bcz we extended this POM with basepage which already
-    // has this page variable and type.
-    readonly submitBtn:Locator;
-    readonly assertBody:Locator;
-    readonly firstName: Locator;
-    readonly lasttName: Locator;
-    readonly email: Locator;
-    readonly message: Locator;
-    readonly successfulSubmission: Locator;
-    readonly unsuccessfulSubmission: Locator;
-    
 
-    constructor(page:Page){
+class ContactUsPage extends BasePage{
+
+    constructor(page){
         super(page);
         this.submitBtn = page.locator('input[value="SUBMIT"]');
         this.assertBody = page.locator('body');
@@ -38,7 +28,7 @@ export class ContactUsPage extends BasePage{
     async takeScrnshotFromFailedSubmission(){
         await this.assertBody.screenshot({path:"Data/webdriver-university/screenshots/empty.png"});
     }
-    async fillTheForm(fname:string, lname:string, email:string, comment:string){
+    async fillTheForm(fname, lname, email, comment){
         await this.firstName.type(fname);
         await this.lasttName.type(lname);
         await this.email.type(email);
@@ -58,3 +48,4 @@ export class ContactUsPage extends BasePage{
 
     
 }
+module.exports = { ContactUsPage };

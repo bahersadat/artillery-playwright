@@ -2,14 +2,32 @@ config:
   target: http://webdriveruniversity.com/Contact-Us/contactus.html
   phases:
     - arrivalRate: 1
-      duration: 6
+      duration: 10
   engines:
     playwright:
       launchOptions:
         headless: false
-  processor: "./fill-form.js"
+  processor: "./tests/webdriver-university/contactUs.spec.js"
 scenarios:
-  - name: "Contact Us page"
+  - name: "FillAll"
     engine: playwright
-    flowFunction: "FillForm"
     flow: []
+    flowFunction: "FillForm"
+
+  - name: "NoFill"
+    engine: playwright
+    flow: []
+    flowFunction: "EmptyForm"
+
+  - name: "PartialFill"
+    engine: playwright
+    flow: []
+    flowFunction: "PartialFillForm"     
+
+
+    
+       
+    
+
+  
+    

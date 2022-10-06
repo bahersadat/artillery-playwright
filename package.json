@@ -4,7 +4,8 @@
   "description": "Automated software testing with playwright",
   "main": "index.js",
   "scripts": {
-    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java",
+    "tests:parabank": "playwright test tests/webdriver-university/contactUs.spec.js --project=chromium --reporter=list"
   },
   "author": "Baher Sadat",
   "license": "ISC",
