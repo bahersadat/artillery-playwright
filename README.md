@@ -1,6 +1,4 @@
-# webdriveruniversity.com  
-It is a demo website for practicing test automations.  
-This repository contains a simple load testing using artillery-playwright-engine.  
+ This repository contains 2 example of load testing using artillery-playwright-engine.  
 ## installation:  
 Install Artillery and this engine:  
 `npm install -g artillery artillery-engine-playwright`  
