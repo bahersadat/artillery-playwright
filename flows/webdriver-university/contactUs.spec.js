@@ -18,7 +18,7 @@ async function FillForm( page ) {
     // visit webpage
     await contactUsPage.navigateToContactUsUrl();
 
-    await contactUsPage.fillTheForm("Brock", "Lesner", "brocklawda@gmail.com", "Brock Lesner is not a champion");
+    await contactUsPage.fillTheForm("Brock", "Lesner", "brocklesner@gmail.com", "Brock Lesner is not a champion");
     await contactUsPage.assertSuccessfulSubmission();
 }
 async function PartialFillForm( page ) {

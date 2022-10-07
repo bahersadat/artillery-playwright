@@ -1,0 +1,56 @@
+config:
+  target: http://zero.webappsecurity.com/index.html
+  phases:
+    - duration: 6
+      arrivalRate: 1
+  engines:
+    playwright:
+      launchOptions:
+        headless: true
+  processor: "./flows/e2e/e2eFlow.js"
+scenarios:
+  - name: searchTest
+    engine: playwright
+    flow: []
+    flowFunction: "search"
+
+  - name: loginNegative
+    engine: playwright
+    flow: []
+    flowFunction: "loginNegative"
+
+  - name: loginPositive
+    engine: playwright
+    flow: []
+    flowFunction: "loginPositive"
+
+  - name: accActivity
+    engine: playwright
+    flow: []
+    flowFunction: "accActivity"
+
+  - name: currencyExchange
+    engine: playwright
+    flow: []
+    flowFunction: "currencyExchange"
+
+  - name: payment
+    engine: playwright
+    flow: []
+    flowFunction: "payment"
+
+  - name: resetFeedbackForm
+    engine: playwright
+    flow: []
+    flowFunction: "resetFeedbackForm"
+
+  - name: submitFeedbackForm
+    engine: playwright
+    flow: []
+    flowFunction: "submitFeedbackForm"
+
+  - name: transferFunds
+    engine: playwright
+    flow: []
+    flowFunction: "transferFunds"
+    
