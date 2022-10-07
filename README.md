@@ -5,4 +5,5 @@ This repository contains a simple load testing using artillery-playwright-engine
 Install Artillery and this engine:  
 `npm install -g artillery artillery-engine-playwright`  
 ## run it:  
-`artillery run contactUs-load-test.yml`
+`artillery run contactUs-load-test.yml`  
+`artillery run e2e.yml`
