@@ -75,7 +75,7 @@ async function payment( page ) {
     await loginPage.homePage.hackToBypassSignIn();
     // payment - filling form and submission
     await loginPage.navbar.clickOnTab("Pay Bills");
-    await loginPage.paymentPage.payBill();
+    await loginPage.paymentPage.payBill( 'Apple', '1000', '2022-9-10' ); // payee can be: Bank of America, Wells Fargo, Apple
 }
 async function resetFeedbackForm( page ) {
     const loginPage = new LoginPage( page );

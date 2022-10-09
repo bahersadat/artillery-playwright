@@ -14,13 +14,14 @@ class PaymentPage{
         this.successAlert = page.locator("#alert_content > span");
 
     }
-    async payBill(){
-        await this.payee.selectOption("apple");
+    // payee can be: Bank of America, Wells Fargo, Apple
+    async payBill(payee, amount, date ){
+        await this.payee.selectOption(payee);
         await this.payeeDetail.click();
         await expect(this.payeeDetailAppear).toBeVisible();
         await this.accSelection.selectOption("6");
-        await this.amount.type("5000");
-        await this.inputDate.type("2022-09-10");
+        await this.amount.type(amount);
+        await this.inputDate.type(date);
         await this.inputDescription.type("a beautiful description");
         await this.payBtn.click();
         await expect(this.successAlert).toBeVisible();

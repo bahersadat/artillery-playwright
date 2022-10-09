@@ -26,7 +26,7 @@ test.describe("payment-automation", () => {
   test("payment- filling form and submission", async ({ page }) => {
 
     await loginPage.navbar.clickOnTab("Pay Bills");
-    await loginPage.paymentPage.payBill();
+    await loginPage.paymentPage.payBill( 'Apple', '10000', '2022-9-10' ); // payee can be: Bank of America, Wells Fargo, Apple
 
   });
 });
